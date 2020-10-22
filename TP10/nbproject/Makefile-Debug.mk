@@ -36,7 +36,12 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/MainTP10.o \
-	${OBJECTDIR}/bitSet.o
+	${OBJECTDIR}/bitClr.o \
+	${OBJECTDIR}/bitGet.o \
+	${OBJECTDIR}/bitSet.o \
+	${OBJECTDIR}/bitToggle.o \
+	${OBJECTDIR}/getBin.o \
+	${OBJECTDIR}/maskOn.o
 
 
 # C Compiler Flags
@@ -68,10 +73,35 @@ ${OBJECTDIR}/MainTP10.o: MainTP10.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MainTP10.o MainTP10.c
 
+${OBJECTDIR}/bitClr.o: bitClr.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitClr.o bitClr.c
+
+${OBJECTDIR}/bitGet.o: bitGet.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitGet.o bitGet.c
+
 ${OBJECTDIR}/bitSet.o: bitSet.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitSet.o bitSet.c
+
+${OBJECTDIR}/bitToggle.o: bitToggle.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitToggle.o bitToggle.c
+
+${OBJECTDIR}/getBin.o: getBin.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/getBin.o getBin.c
+
+${OBJECTDIR}/maskOn.o: maskOn.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskOn.o maskOn.c
 
 # Subprojects
 .build-subprojects:

@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 
-/*bitSet: Dado un puerto y un número de bit, debe cambiar su estado a 1.*/
-
-void bitSet (int* puntero, int bit)
+void getBin (int* arreglo, int mascara,int estado)
 {
-    puntero[bit]=1;
+    if(mascara==0)
+        return;
+    else
+        getBin(arreglo[estado+1]/2);
+        arreglo[]=(mascara%2);
 }

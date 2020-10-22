@@ -14,7 +14,12 @@
                    displayName="Source Files"
                    projectFiles="true">
       <itemPath>MainTP10.c</itemPath>
+      <itemPath>bitClr.c</itemPath>
+      <itemPath>bitGet.c</itemPath>
       <itemPath>bitSet.c</itemPath>
+      <itemPath>bitToggle.c</itemPath>
+      <itemPath>getBin.c</itemPath>
+      <itemPath>maskOn.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -42,7 +47,17 @@
       </item>
       <item path="MainTP10.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="bitClr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitGet.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="bitSet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitToggle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="getBin.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskOn.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -69,7 +84,17 @@
       </item>
       <item path="MainTP10.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="bitClr.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitGet.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="bitSet.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitToggle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="getBin.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskOn.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>

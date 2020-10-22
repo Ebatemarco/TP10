@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 
-/*bitSet: Dado un puerto y un número de bit, debe cambiar su estado a 1.*/
+/*bitGet: Dado un puerto y un número de bit, debe devolver su valor.*/
 
-void bitSet (int* puntero, int bit)
+int bitGet (int* puntero, int bit)
 {
-    puntero[bit]=1;
+    int val;
+    val = puntero[bit];
+    return val; 
 }

@@ -4,9 +4,9 @@
  * and open the template in the editor.
  */
 
-/*bitSet: Dado un puerto y un número de bit, debe cambiar su estado a 1.*/
+/*bitClr: Dado un puerto y un número de bit, debe cambiar su estado a 0*/
 
-void bitSet (int* puntero, int bit)
+void bitClr (int* puntero, int bit)
 {
-    puntero[bit]=1;
+    puntero[bit]=0;
 }

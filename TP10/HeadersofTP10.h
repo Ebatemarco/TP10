@@ -11,19 +11,16 @@
  * Created on 22 de octubre de 2020, 19:34
  */
 
-#ifndef HEADERSOFTP10_H
-#define HEADERSOFTP10_H
+#include <stdio.h>
+#include "HeadersofTP10.h"
+#include <stdlib.h> 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+void bitClr (int* puntero, int bit);
 
+int bitGet (int* puntero, int bit); 
 
+void bitSet (int* puntero, int bit);
 
+void bitToggle(int* puntero, int bit);
 
-#ifdef __cplusplus
-}
-#endif
-
-#endif /* HEADERSOFTP10_H */
-
+void maskOn (int* puntero, int mascara);
