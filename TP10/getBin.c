@@ -9,6 +9,6 @@ void getBin (int* arreglo, int mascara,int estado)
     if(mascara==0)
         return;
     else
-        getBin(arreglo[estado+1]/2);
-        arreglo[]=(mascara%2);
+        getBin(arreglo, mascara/2, estado+1);
+        arreglo[estado]=(mascara%2);
 }
