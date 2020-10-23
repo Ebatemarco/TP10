@@ -19,19 +19,20 @@
  * Simple C Test Suite
  */
 
-void getBin(int* arreglo, int mascara, int estado);
+#include "HeadersofTP10.h"
 
 void testGetBin() 
 {
     int i;
-    int arreglo[8];
+    int arreglo[8]={0,0,0,0,0,0,0,0};
     int solucion[8]={0,0,0,0,1,0,1,0};
     int mascara=0xA;
-    int estado=0;
-    getBin(arreglo, mascara, estado);
-    for(i=0; i<8;i++)
+    
+    getBin(arreglo, mascara);
+    
+    for(i=0; i<=7;i++)
     {
-        if (arreglo[i]!=solucion[i] /*check result*/) 
+        if (arreglo[i]!= solucion[i] /*check result*/) 
         {
             printf("%%TEST_FAILED%% testname=testGetBin (newsimpletest) message=error message sample\n");
             printf("ERROR in Element: %d = %d\n",i,arreglo[i]);

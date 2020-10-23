@@ -6,13 +6,13 @@
 
 #include "HeadersofTP10.h"
 
-void getBin (int* arreglo, int mascara,int estado)
+void getBin (int arreglo[8], int mascara)
 {
-    if(mascara==0)
-        return;
-    else
+    int i;
+    int mask=mascara;
+    for(i=7;i>=0;i--)
     {
-        getBin(arreglo, mascara/2, estado+1);
-        arreglo[estado]=(mascara%2);    
+        arreglo[i]=(mask%2);
+        mask/=2;
     }
 }

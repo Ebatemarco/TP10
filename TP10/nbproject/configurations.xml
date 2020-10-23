@@ -19,7 +19,9 @@
       <itemPath>bitSet.c</itemPath>
       <itemPath>bitToggle.c</itemPath>
       <itemPath>getBin.c</itemPath>
+      <itemPath>maskOff.c</itemPath>
       <itemPath>maskOn.c</itemPath>
+      <itemPath>maskToggle.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
@@ -30,6 +32,12 @@
                      projectFiles="true"
                      kind="TEST">
         <itemPath>tests/getBinsimpletest.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f1"
+                     displayName="MaskOn Simple Test"
+                     projectFiles="true"
+                     kind="TEST">
+        <itemPath>tests/MaskOnTest.c</itemPath>
       </logicalFolder>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
@@ -61,6 +69,21 @@
       </item>
       <item path="bitToggle.c" ex="false" tool="0" flavor2="0">
       </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
       <folder path="TestFiles/f2">
         <cTool>
           <incDir>
@@ -78,7 +101,13 @@
       </folder>
       <item path="getBin.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="maskOff.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="maskOn.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskToggle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/MaskOnTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="tests/getBinsimpletest.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -115,6 +144,21 @@
       </item>
       <item path="bitToggle.c" ex="false" tool="0" flavor2="0">
       </item>
+      <folder path="TestFiles/f1">
+        <cTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>.</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <output>${TESTDIR}/TestFiles/f1</output>
+        </linkerTool>
+      </folder>
       <folder path="TestFiles/f2">
         <cTool>
           <incDir>
@@ -132,7 +176,13 @@
       </folder>
       <item path="getBin.c" ex="false" tool="0" flavor2="0">
       </item>
+      <item path="maskOff.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="maskOn.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskToggle.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="tests/MaskOnTest.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="tests/getBinsimpletest.c" ex="false" tool="0" flavor2="0">
       </item>

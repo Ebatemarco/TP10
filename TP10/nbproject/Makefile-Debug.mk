@@ -41,17 +41,21 @@ OBJECTFILES= \
 	${OBJECTDIR}/bitSet.o \
 	${OBJECTDIR}/bitToggle.o \
 	${OBJECTDIR}/getBin.o \
-	${OBJECTDIR}/maskOn.o
+	${OBJECTDIR}/maskOff.o \
+	${OBJECTDIR}/maskOn.o \
+	${OBJECTDIR}/maskToggle.o
 
 # Test Directory
 TESTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}/tests
 
 # Test Files
 TESTFILES= \
-	${TESTDIR}/TestFiles/f2
+	${TESTDIR}/TestFiles/f2 \
+	${TESTDIR}/TestFiles/f1
 
 # Test Object Files
 TESTOBJECTFILES= \
+	${TESTDIR}/tests/MaskOnTest.o \
 	${TESTDIR}/tests/getBinsimpletest.o
 
 # C Compiler Flags
@@ -108,10 +112,20 @@ ${OBJECTDIR}/getBin.o: getBin.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/getBin.o getBin.c
 
+${OBJECTDIR}/maskOff.o: maskOff.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskOff.o maskOff.c
+
 ${OBJECTDIR}/maskOn.o: maskOn.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskOn.o maskOn.c
+
+${OBJECTDIR}/maskToggle.o: maskToggle.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskToggle.o maskToggle.c
 
 # Subprojects
 .build-subprojects:
@@ -124,11 +138,21 @@ ${TESTDIR}/TestFiles/f2: ${TESTDIR}/tests/getBinsimpletest.o ${OBJECTFILES:%.o=%
 	${MKDIR} -p ${TESTDIR}/TestFiles
 	${LINK.c} -o ${TESTDIR}/TestFiles/f2 $^ ${LDLIBSOPTIONS}   
 
+${TESTDIR}/TestFiles/f1: ${TESTDIR}/tests/MaskOnTest.o ${OBJECTFILES:%.o=%_nomain.o}
+	${MKDIR} -p ${TESTDIR}/TestFiles
+	${LINK.c} -o ${TESTDIR}/TestFiles/f1 $^ ${LDLIBSOPTIONS}   
+
 
 ${TESTDIR}/tests/getBinsimpletest.o: tests/getBinsimpletest.c 
 	${MKDIR} -p ${TESTDIR}/tests
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/getBinsimpletest.o tests/getBinsimpletest.c
+
+
+${TESTDIR}/tests/MaskOnTest.o: tests/MaskOnTest.c 
+	${MKDIR} -p ${TESTDIR}/tests
+	${RM} "$@.d"
+	$(COMPILE.c) -g -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/MaskOnTest.o tests/MaskOnTest.c
 
 
 ${OBJECTDIR}/MainTP10_nomain.o: ${OBJECTDIR}/MainTP10.o MainTP10.c 
@@ -209,6 +233,19 @@ ${OBJECTDIR}/getBin_nomain.o: ${OBJECTDIR}/getBin.o getBin.c
 	    ${CP} ${OBJECTDIR}/getBin.o ${OBJECTDIR}/getBin_nomain.o;\
 	fi
 
+${OBJECTDIR}/maskOff_nomain.o: ${OBJECTDIR}/maskOff.o maskOff.c 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/maskOff.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.c) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskOff_nomain.o maskOff.c;\
+	else  \
+	    ${CP} ${OBJECTDIR}/maskOff.o ${OBJECTDIR}/maskOff_nomain.o;\
+	fi
+
 ${OBJECTDIR}/maskOn_nomain.o: ${OBJECTDIR}/maskOn.o maskOn.c 
 	${MKDIR} -p ${OBJECTDIR}
 	@NMOUTPUT=`${NM} ${OBJECTDIR}/maskOn.o`; \
@@ -222,11 +259,25 @@ ${OBJECTDIR}/maskOn_nomain.o: ${OBJECTDIR}/maskOn.o maskOn.c
 	    ${CP} ${OBJECTDIR}/maskOn.o ${OBJECTDIR}/maskOn_nomain.o;\
 	fi
 
+${OBJECTDIR}/maskToggle_nomain.o: ${OBJECTDIR}/maskToggle.o maskToggle.c 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/maskToggle.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.c) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskToggle_nomain.o maskToggle.c;\
+	else  \
+	    ${CP} ${OBJECTDIR}/maskToggle.o ${OBJECTDIR}/maskToggle_nomain.o;\
+	fi
+
 # Run Test Targets
 .test-conf:
 	@if [ "${TEST}" = "" ]; \
 	then  \
 	    ${TESTDIR}/TestFiles/f2 || true; \
+	    ${TESTDIR}/TestFiles/f1 || true; \
 	else  \
 	    ./${TEST} || true; \
 	fi
