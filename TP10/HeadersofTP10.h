@@ -12,7 +12,7 @@
  */
 
 #include <stdio.h>
-#include "HeadersofTP10.h"
+
 #include <stdlib.h> 
 
 void bitClr (int* puntero, int bit);
@@ -24,3 +24,5 @@ void bitSet (int* puntero, int bit);
 void bitToggle(int* puntero, int bit);
 
 void maskOn (int* puntero, int mascara);
+
+void getBin (int* arreglo, int mascara,int estado);

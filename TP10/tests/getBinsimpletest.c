@@ -14,6 +14,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 /*
  * Simple C Test Suite
  */
@@ -24,7 +25,7 @@ void testGetBin()
 {
     int i;
     int arreglo[8];
-    int solucion[8]={0,0,0,0,1,0,1,1};
+    int solucion[8]={0,0,0,0,1,0,1,0};
     int mascara=0xA;
     int estado=0;
     getBin(arreglo, mascara, estado);

@@ -6,6 +6,8 @@
 
 /*bitGet: Dado un puerto y un número de bit, debe devolver su valor.*/
 
+#include "HeadersofTP10.h"
+
 int bitGet (int* puntero, int bit)
 {
     int val;

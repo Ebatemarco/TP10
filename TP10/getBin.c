@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 
+#include "HeadersofTP10.h"
+
 void getBin (int* arreglo, int mascara,int estado)
 {
     if(mascara==0)
         return;
     else
+    {
         getBin(arreglo, mascara/2, estado+1);
-        arreglo[estado]=(mascara%2);
+        arreglo[estado]=(mascara%2);    
+    }
 }
