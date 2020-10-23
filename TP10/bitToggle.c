@@ -6,7 +6,7 @@
 
 /*bitToggle:  Dado  un  puerto  y  un  número  de  bit,  debe  cambiar  al  estado*/
 
-#include "HeadersofTP10.h"
+#include "EmuladordePuertos.h"
 
 void bitToggle(int* puntero, int bit)
 {

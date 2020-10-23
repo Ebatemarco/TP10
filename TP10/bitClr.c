@@ -6,7 +6,7 @@
 
 /*bitClr: Dado un puerto y un número de bit, debe cambiar su estado a 0*/
 
-#include "HeadersofTP10.h"
+#include "EmuladordePuertos.h"
 
 void bitClr (int* puntero, int bit)
 {

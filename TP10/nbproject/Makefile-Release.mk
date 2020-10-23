@@ -35,7 +35,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/MainTP10.o \
 	${OBJECTDIR}/bitClr.o \
 	${OBJECTDIR}/bitGet.o \
 	${OBJECTDIR}/bitSet.o \
@@ -81,11 +80,6 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tp10: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tp10 ${OBJECTFILES} ${LDLIBSOPTIONS}
-
-${OBJECTDIR}/MainTP10.o: MainTP10.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MainTP10.o MainTP10.c
 
 ${OBJECTDIR}/bitClr.o: bitClr.c
 	${MKDIR} -p ${OBJECTDIR}
@@ -154,19 +148,6 @@ ${TESTDIR}/tests/MaskOnTest.o: tests/MaskOnTest.c
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/MaskOnTest.o tests/MaskOnTest.c
 
-
-${OBJECTDIR}/MainTP10_nomain.o: ${OBJECTDIR}/MainTP10.o MainTP10.c 
-	${MKDIR} -p ${OBJECTDIR}
-	@NMOUTPUT=`${NM} ${OBJECTDIR}/MainTP10.o`; \
-	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
-	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
-	then  \
-	    ${RM} "$@.d";\
-	    $(COMPILE.c) -O2 -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/MainTP10_nomain.o MainTP10.c;\
-	else  \
-	    ${CP} ${OBJECTDIR}/MainTP10.o ${OBJECTDIR}/MainTP10_nomain.o;\
-	fi
 
 ${OBJECTDIR}/bitClr_nomain.o: ${OBJECTDIR}/bitClr.o bitClr.c 
 	${MKDIR} -p ${OBJECTDIR}

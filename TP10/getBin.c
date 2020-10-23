@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-#include "HeadersofTP10.h"
+#include "EmuladordePuertos.h"
 
 void getBin (int arreglo[8], int mascara)
 {
