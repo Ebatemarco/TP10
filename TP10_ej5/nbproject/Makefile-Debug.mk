@@ -35,7 +35,16 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/Validar_1.o \
+	${OBJECTDIR}/bitClr_1.o \
+	${OBJECTDIR}/bitGet_1.o \
+	${OBJECTDIR}/bitSet_1.o \
+	${OBJECTDIR}/bitToggle_1.o \
+	${OBJECTDIR}/getBin_1.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/maskOff_1.o \
+	${OBJECTDIR}/maskOn_1.o \
+	${OBJECTDIR}/maskToggle_1.o
 
 
 # C Compiler Flags
@@ -62,10 +71,55 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tp10_ej5: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tp10_ej5 ${OBJECTFILES} ${LDLIBSOPTIONS}
 
+${OBJECTDIR}/Validar_1.o: Validar_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Validar_1.o Validar_1.c
+
+${OBJECTDIR}/bitClr_1.o: bitClr_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitClr_1.o bitClr_1.c
+
+${OBJECTDIR}/bitGet_1.o: bitGet_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitGet_1.o bitGet_1.c
+
+${OBJECTDIR}/bitSet_1.o: bitSet_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitSet_1.o bitSet_1.c
+
+${OBJECTDIR}/bitToggle_1.o: bitToggle_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitToggle_1.o bitToggle_1.c
+
+${OBJECTDIR}/getBin_1.o: getBin_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/getBin_1.o getBin_1.c
+
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/maskOff_1.o: maskOff_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskOff_1.o maskOff_1.c
+
+${OBJECTDIR}/maskOn_1.o: maskOn_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskOn_1.o maskOn_1.c
+
+${OBJECTDIR}/maskToggle_1.o: maskToggle_1.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/maskToggle_1.o maskToggle_1.c
 
 # Subprojects
 .build-subprojects:

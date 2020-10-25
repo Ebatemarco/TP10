@@ -12,6 +12,17 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="SourceFiles" displayName="Libreria" projectFiles="true">
+        <itemPath>Validar_1.c</itemPath>
+        <itemPath>bitClr_1.c</itemPath>
+        <itemPath>bitGet_1.c</itemPath>
+        <itemPath>bitSet_1.c</itemPath>
+        <itemPath>bitToggle_1.c</itemPath>
+        <itemPath>getBin_1.c</itemPath>
+        <itemPath>maskOff_1.c</itemPath>
+        <itemPath>maskOn_1.c</itemPath>
+        <itemPath>maskToggle_1.c</itemPath>
+      </logicalFolder>
       <itemPath>main.c</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -36,7 +47,25 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="Validar_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitClr_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitGet_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitSet_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitToggle_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="getBin_1.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskOff_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskOn_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskToggle_1.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
     <conf name="Release" type="1">
@@ -59,7 +88,25 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="Validar_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitClr_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitGet_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitSet_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="bitToggle_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="getBin_1.c" ex="false" tool="0" flavor2="0">
+      </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskOff_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskOn_1.c" ex="false" tool="0" flavor2="0">
+      </item>
+      <item path="maskToggle_1.c" ex="false" tool="0" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -13,12 +13,13 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "/Home/NetBeansProjects/TP10/TP10/HeadersofTP10.h"
+#include "HeadersofTP10.h"
 
 /*
  * 
  */
-int main(int argc, char** argv) {
+int main(int argc, char** argv) 
+{
 
     char c;
     int port [8] = {0,0,0,0,0,0,0,0};
@@ -28,7 +29,7 @@ int main(int argc, char** argv) {
      switch (c)
      {
          case 't': 
-             masktoggle(port, 0xFF); 
+             maskToggle(port, 0xFF); 
              break;
          case 'c':
              maskOff (port, 0xFF);
@@ -68,7 +69,7 @@ int main(int argc, char** argv) {
 void switchcase (int caso, int port [8])
 {
      if (bitGet(port, caso))
-        bitClear (port,caso);
+        bitClr (port,caso);
      else 
         bitSet (port, caso);
 }
