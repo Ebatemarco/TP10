@@ -8,7 +8,7 @@
 
 #include "HeadersofTP10.h"
 
-void bitToggle(int* puntero, int bit)
+void bitToggle(uint8_t* puntero, int bit)
 {
     validar (puntero, bit);
     if(puntero[bit] & 1 == 0)

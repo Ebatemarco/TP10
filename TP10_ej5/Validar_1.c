@@ -3,12 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-#include "HeadersofTP10.h"
 
-void validar (int* puntero, int bit)
+#include "HeadersofTP10.h"
+#include <stdio.h>
+
+int validar (int* puntero, int bit)
 {
-    if (puntero == 'NULL')
+    int val=1;
+    if (puntero == NULL)
+    {
         printf ("Error");
+        val=0;
+    }
     else if (bit<=0 || bit>=7)
+    {
         printf ("Error, numero de bit incorrecto");
+        val=0;
+    }
+    return val;
 }

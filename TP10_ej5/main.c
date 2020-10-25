@@ -38,35 +38,35 @@ int main(int argc, char** argv)
              maskOn (portA, 0xFF);
              break;
          case 0: 
-             switchcase (0, portA.b0);
+             switchcase (0, portA);
              break;
          case 1:
-             switchcase (1, portA .b1);
+             switchcase (1, portA);
              break;
          case 2: 
-             switchcase (2, portA .b2);
+             switchcase (2, portA);
              break;
          case 3: 
-             switchcase (3, portA .b3);
+             switchcase (3, portA);
              break;
          case 4:
-             switchcase (4, portA .b4);
+             switchcase (4, portA);
              break;
          case 5: 
-             switchcase (5, portA .b5);
+             switchcase (5, portA);
              break;
          case 6: 
-             switchcase (6, portA .b6);
+             switchcase (6, portA);
              break;
          case 7:
-             switchcase (7, portA .b7);
+             switchcase (7, portA);
              break;
      }
     }
     return (EXIT_SUCCESS); 
 }
 
-void switchcase (int caso, bits8_t port)
+void switchcase (int caso, bits8_t port)// 0, portA
 {
      if (bitGet(port, caso))
         bitClr (port, caso);
@@ -82,4 +82,3 @@ void led_state (int port [8])
         printf ("Led %d: %d\n", i, port[i]);
     }
 }
-

@@ -19,7 +19,6 @@
         <itemPath>bitGet_1.c</itemPath>
         <itemPath>bitSet_1.c</itemPath>
         <itemPath>bitToggle_1.c</itemPath>
-        <itemPath>getBin_1.c</itemPath>
         <itemPath>maskOff_1.c</itemPath>
         <itemPath>maskOn_1.c</itemPath>
         <itemPath>maskToggle_1.c</itemPath>
@@ -59,8 +58,6 @@
       <item path="bitSet_1.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="bitToggle_1.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="getBin_1.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -102,8 +99,6 @@
       <item path="bitSet_1.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="bitToggle_1.c" ex="false" tool="0" flavor2="0">
-      </item>
-      <item path="getBin_1.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="main.c" ex="false" tool="0" flavor2="0">
       </item>

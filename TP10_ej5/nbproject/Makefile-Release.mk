@@ -40,7 +40,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/bitGet_1.o \
 	${OBJECTDIR}/bitSet_1.o \
 	${OBJECTDIR}/bitToggle_1.o \
-	${OBJECTDIR}/getBin_1.o \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/maskOff_1.o \
 	${OBJECTDIR}/maskOn_1.o \
@@ -95,11 +94,6 @@ ${OBJECTDIR}/bitToggle_1.o: bitToggle_1.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/bitToggle_1.o bitToggle_1.c
-
-${OBJECTDIR}/getBin_1.o: getBin_1.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/getBin_1.o getBin_1.c
 
 ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
