@@ -10,7 +10,15 @@
 
 int bitGet (int* puntero, int bit)
 {
+    validar (puntero, bit);
+    
     int val;
-    val = puntero[bit];
-    return val; 
+    
+    if(puntero[bit] & 1 == 0)
+        val=0;
+    else
+        val=1;
+    
+    return val;
+               
 }

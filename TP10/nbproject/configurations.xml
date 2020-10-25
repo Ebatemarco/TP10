@@ -13,6 +13,7 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>Validar.c</itemPath>
       <itemPath>bitClr.c</itemPath>
       <itemPath>bitGet.c</itemPath>
       <itemPath>bitSet.c</itemPath>
@@ -57,6 +58,8 @@
       <compileType>
       </compileType>
       <item path="HeadersofTP10.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Validar.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="bitClr.c" ex="false" tool="0" flavor2="0">
       </item>
@@ -130,6 +133,8 @@
         </asmTool>
       </compileType>
       <item path="HeadersofTP10.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Validar.c" ex="false" tool="0" flavor2="0">
       </item>
       <item path="bitClr.c" ex="false" tool="0" flavor2="0">
       </item>

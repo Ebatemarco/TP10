@@ -10,5 +10,6 @@
 
 void bitClr (int* puntero, int bit)
 {
-    puntero[bit]=0;
+    validar (puntero, bit);
+    puntero[bit]= puntero[bit] & 0;   
 }

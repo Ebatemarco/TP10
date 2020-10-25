@@ -8,17 +8,11 @@
  * en  la  máscara,  sin  cambiar  el  estado  de  los  restantes.  Por ejemplo, dado el puerto 
  * A, que originalmente se encuentra en el estado 0x0A, al aplicarle la máscara 0x02, el resultado será 0x08.*/
 
-#include "EmuladordePuertos.h" 
+#include "EmuladordePuertos.h"
+#include "HeadersofTP10.h" 
 
-void maskOn (int* puntero, int mascara)//A=0000 1010
+void maskoff (byte_t* port, int mascara)//A=0000 1010
 {
-    int i;
-    int arreglo[8];
-    getBin(arreglo[0], mascara);//creo un arreglo de 8 elementos con 1 y 0 correspondientes a la mascara
-    for(i=0; i<=8;i++)
-    {   
-        if(arreglo[i]==1)
-            puntero[i]=0;             
-    }
-   
+    if ((port!=NULL) && (mascara<=0xFF && mascara>=0))
+    port->byte_port = ((port->byte_port) & mascara)
 }

@@ -14,6 +14,26 @@
 #include <stdio.h>
 #include <stdlib.h> 
 
+typedef struct 
+{
+	uint8_t b0	:1;
+	uint8_t b1	:1;
+	uint8_t b2	:1;
+	uint8_t b3	:1;
+	uint8_t b4	:1;
+	uint8_t b5	:1;
+	uint8_t b6	:1;
+	uint8_t b7	:1;
+		
+} bits8_t; //estructura para leer o escribir los bits del registro
+
+typedef union
+{
+	bits8_t bit_port;
+	uint8_t byte_port;
+}byte_t;  // estructura de los registros A y B para el ingreso bit a bit o byte.
+
+
 void bitClr (int* puntero, int bit);
 /*Dado un puerto y un número de bit, debe cambiar su estado a 0*/
 

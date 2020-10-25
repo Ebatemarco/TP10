@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/Validar.o \
 	${OBJECTDIR}/bitClr.o \
 	${OBJECTDIR}/bitGet.o \
 	${OBJECTDIR}/bitSet.o \
@@ -80,6 +81,11 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tp10: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/tp10 ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/Validar.o: Validar.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Validar.o Validar.c
 
 ${OBJECTDIR}/bitClr.o: bitClr.c
 	${MKDIR} -p ${OBJECTDIR}
@@ -148,6 +154,19 @@ ${TESTDIR}/tests/MaskOnTest.o: tests/MaskOnTest.c
 	${RM} "$@.d"
 	$(COMPILE.c) -g -I. -MMD -MP -MF "$@.d" -o ${TESTDIR}/tests/MaskOnTest.o tests/MaskOnTest.c
 
+
+${OBJECTDIR}/Validar_nomain.o: ${OBJECTDIR}/Validar.o Validar.c 
+	${MKDIR} -p ${OBJECTDIR}
+	@NMOUTPUT=`${NM} ${OBJECTDIR}/Validar.o`; \
+	if (echo "$$NMOUTPUT" | ${GREP} '|main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T main$$') || \
+	   (echo "$$NMOUTPUT" | ${GREP} 'T _main$$'); \
+	then  \
+	    ${RM} "$@.d";\
+	    $(COMPILE.c) -g -Dmain=__nomain -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Validar_nomain.o Validar.c;\
+	else  \
+	    ${CP} ${OBJECTDIR}/Validar.o ${OBJECTDIR}/Validar_nomain.o;\
+	fi
 
 ${OBJECTDIR}/bitClr_nomain.o: ${OBJECTDIR}/bitClr.o bitClr.c 
 	${MKDIR} -p ${OBJECTDIR}

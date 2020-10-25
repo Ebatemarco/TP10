@@ -10,8 +10,9 @@
 
 void bitToggle(int* puntero, int bit)
 {
-    if(puntero[bit]==0)
-        puntero[bit]=1;
+    validar (puntero, bit);
+    if(puntero[bit] & 1 == 0)
+        puntero[bit]= puntero[bit] | 1;
     else
-        puntero[bit]=0;
+        puntero[bit]= puntero[bit] & 0;
 }

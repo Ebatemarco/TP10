@@ -10,5 +10,6 @@
 
 void bitSet (int* puntero, int bit)
 {
-    puntero[bit]=1;
+    validar (puntero, bit);
+    puntero[bit]= puntero[bit] | 1;
 }

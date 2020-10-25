@@ -12,15 +12,12 @@
 
 #include "EmuladordePuertos.h"
 
-void maskOn (int* puntero, int mascara)//A=0000 1010
+void maskOn (byte_t* port, int mascara)//A=0000 1010
 {
-    int i;
-    int arreglo[8];
-    getBin(arreglo[0], mascara);//creo un arreglo de 8 elementos con 1 y 0 correspondientes a la mascara
-    for(i=0; i<=8;i++)
-    {   
-        if(arreglo[i]==1)
-            puntero[i]=arreglo[i];             
+    if ((port!=NULL) && (mascara<=0xFF && mascara>=0))
+    {
+     port->byte_port = ((port->byte_port) | mascara);
     }
-   
+    else 
+        printf ("Error");
 }
