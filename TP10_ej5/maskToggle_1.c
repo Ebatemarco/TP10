@@ -10,7 +10,7 @@
  * dado el puerto A, que originalmente se encuentra  en  el  estado  0x02,
  * al  aplicarle  la  máscara  0x03,  el  resultado  será 0x01.*/
 
-#include "EmuladordePuertos.h" 
+#include "HeadersofTP10.h" 
 
 void maskOn (byte_t* port, int mascara)//A=0000 1010
 {

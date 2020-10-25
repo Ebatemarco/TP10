@@ -6,7 +6,7 @@
 
 /*bitSet: Dado un puerto y un número de bit, debe cambiar su estado a 1.*/
 
-#include "EmuladordePuertos.h"
+#include "HeadersofTP10.h"
 
 void bitSet (int* puntero, int bit)
 {

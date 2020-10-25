@@ -8,7 +8,6 @@
  * en  la  máscara,  sin  cambiar  el  estado  de  los  restantes.  Por ejemplo, dado el puerto 
  * A, que originalmente se encuentra en el estado 0x0A, al aplicarle la máscara 0x02, el resultado será 0x08.*/
 
-#include "EmuladordePuertos.h"
 #include "HeadersofTP10.h" 
 
 void maskoff (byte_t* port, int mascara)//A=0000 1010

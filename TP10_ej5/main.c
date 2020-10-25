@@ -22,54 +22,54 @@ int main(int argc, char** argv)
 {
 
     char c;
-    int port [8] = {0,0,0,0,0,0,0,0};
+    bits8_t portA;
 
     while ((c=getchar())!='q')
     {
      switch (c)
      {
          case 't': 
-             maskToggle(port, 0xFF); 
+             maskToggle(portA, 0xFF); 
              break;
          case 'c':
-             maskOff (port, 0xFF);
+             maskOff (portA, 0xFF);
              break;
          case 's':
-             maskOn (port, 0xFF);
+             maskOn (portA, 0xFF);
              break;
          case 0: 
-             switchcase (0, port);
+             switchcase (0, portA.b0);
              break;
          case 1:
-             switchcase (1, port);
+             switchcase (1, portA .b1);
              break;
          case 2: 
-             switchcase (2, port);
+             switchcase (2, portA .b2);
              break;
          case 3: 
-             switchcase (3, port);
+             switchcase (3, portA .b3);
              break;
          case 4:
-             switchcase (4, port);
+             switchcase (4, portA .b4);
              break;
          case 5: 
-             switchcase (5, port);
+             switchcase (5, portA .b5);
              break;
          case 6: 
-             switchcase (6, port);
+             switchcase (6, portA .b6);
              break;
          case 7:
-             switchcase (7, port);
+             switchcase (7, portA .b7);
              break;
      }
     }
     return (EXIT_SUCCESS); 
 }
 
-void switchcase (int caso, int port [8])
+void switchcase (int caso, bits8_t port)
 {
      if (bitGet(port, caso))
-        bitClr (port,caso);
+        bitClr (port, caso);
      else 
         bitSet (port, caso);
 }
@@ -82,3 +82,4 @@ void led_state (int port [8])
         printf ("Led %d: %d\n", i, port[i]);
     }
 }
+
