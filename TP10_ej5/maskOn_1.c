@@ -14,7 +14,7 @@
 
 void maskOn (byte_t* port, int mascara)//A=0000 1010
 {
-    if ((port!=NULL) && (mascara<=0xFF && mascara>=0))
+    if ((port!='NULL') && (mascara<=0xFF && mascara>=0))
     {
      port->byte_port = ((port->byte_port) | mascara);
     }

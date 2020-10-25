@@ -8,7 +8,7 @@
 
 #include "HeadersofTP10.h"
 
-void bitSet (int* puntero, int bit)
+void bitSet (uint8_t* puntero, int bit)
 {
     validar (puntero, bit);
     puntero[bit]= puntero[bit] | 1;

@@ -8,8 +8,9 @@
 
 #include "HeadersofTP10.h"
 
-void bitClr (int* puntero, int bit)
+void bitClr (uint8_t* puntero, int bit)
 {
-    validar (puntero, bit);
-    puntero[bit]= puntero[bit] & 0;   
+    int val= validar (puntero, bit);//validar da 1 si no hay error
+    if(val)
+        puntero[bit]= puntero[bit] & 0;   
 }
